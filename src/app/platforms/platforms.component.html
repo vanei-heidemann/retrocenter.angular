@@ -1,0 +1,9 @@
+<ul class="grids">
+  <li *ngFor="let platform of platforms">
+    <a routerLink="/platformdetail/{{platform.id}}">
+      <span class="badge">{{platform.id}}</span> {{platform.name}}
+    </a>
+  </li>
+</ul>
+<button *ngIf="hasPrev" (click)="getPrevPlatforms()">Prev</button>
+<button *ngIf="hasNext" (click)="getNextPlatforms()">Next</button>

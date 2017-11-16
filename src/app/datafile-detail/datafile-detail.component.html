@@ -1,0 +1,22 @@
+<div *ngIf="datafile">
+  
+    <h2>{{ datafile.name}}</h2>
+    <div>
+      <span>id: </span>{{datafile.id}}</div>
+    <div>
+      <label>Name:
+        <input [(ngModel)]="datafile.name" placeholder="datafile" disabled/>
+      </label>
+    </div>
+    <div>
+      <label>Version:
+        <input [(ngModel)]="datafile.version" placeholder="datafile" disabled/>
+      </label>
+    </div>
+    <div>
+      <label>Description:
+        <input [(ngModel)]="datafile.description" placeholder="datafile" disabled/>
+      </label>
+    </div>
+    <button (click)="goBack()">go back</button>
+  </div>

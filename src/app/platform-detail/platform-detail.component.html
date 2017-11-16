@@ -1,0 +1,31 @@
+<div *ngIf="platform">
+  <h2>{{ platform.name}}</h2>
+  <div>
+    <span>id: </span>{{platform.id}}</div>
+  <div>
+    <label>Name:
+      <input [(ngModel)]="platform.name" placeholder="platform" disabled/>
+    </label>
+  </div>
+  <div>
+    <label>Short name:
+      <input [(ngModel)]="platform.shortName" placeholder="platform" disabled/>
+    </label>
+  </div>
+  <div>
+    <label>Alternate names:
+      <input [(ngModel)]="platform.alternateNames" placeholder="platform" disabled/>
+    </label>
+  </div>
+  <button (click)="getHistories()">File Import History</button>
+  <button (click)="goBack()">go back</button>
+
+  <div *ngIf="histories">
+    <h2>File Imort History</h2>
+    <ul class="grids">
+      <li *ngFor="let history of histories">
+        <span class="badge">{{history.id}}</span> {{history.description}}
+      </li>
+    </ul>
+  </div>
+</div>

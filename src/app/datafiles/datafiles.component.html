@@ -1,0 +1,9 @@
+<ul class="grids">
+  <li *ngFor="let datafile of datafiles">
+    <a routerLink="/datafiledetail/{{datafile.id}}">
+      <span class="badge">{{datafile.id}}</span> {{datafile.name}}
+    </a>
+  </li>
+</ul>
+<button *ngIf="hasPrev" (click)="getPrevDatafiles()">Prev</button>
+<button *ngIf="hasNext" (click)="getNextDatafiles()">Next</button>
