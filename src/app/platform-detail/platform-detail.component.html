@@ -4,17 +4,17 @@
     <span>id: </span>{{platform.id}}</div>
   <div>
     <label>Name:
-      <input [(ngModel)]="platform.name" placeholder="platform" disabled/>
+      <input [(ngModel)]="platform.name" disabled/>
     </label>
   </div>
   <div>
     <label>Short name:
-      <input [(ngModel)]="platform.shortName" placeholder="platform" disabled/>
+      <input [(ngModel)]="platform.shortName" disabled/>
     </label>
   </div>
   <div>
     <label>Alternate names:
-      <input [(ngModel)]="platform.alternateNames" placeholder="platform" disabled/>
+      <input [(ngModel)]="platform.alternateNames" disabled ng-list/>
     </label>
   </div>
   <button (click)="getHistories()">File Import History</button>
