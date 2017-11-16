@@ -14,7 +14,7 @@
   </div>
   <div>
     <label>Alternate names:
-      <input [(ngModel)]="platform.alternateNames" disabled ng-list/>
+      <input *ngFor="let aname of platform.alternateNames" value="{{aname}}" disabled/>
     </label>
   </div>
   <button (click)="getHistories()">File Import History</button>
